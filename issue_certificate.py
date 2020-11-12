@@ -138,6 +138,6 @@ certificateLabel.pack(pady=5)
 certificateEntry.pack(pady=5)
 button2.pack(pady=5)
 
-runButton.pack(pady=10, padx=2, fill=tk.X, side=tk.LEFT)
+runButton.pack(pady=10, padx=5, fill=tk.X, side=tk.LEFT)
 optionsButton.pack(pady=10, fill=tk.X, side=tk.RIGHT)
 window.mainloop()
