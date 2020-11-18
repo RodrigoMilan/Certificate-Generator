@@ -9,7 +9,8 @@ import certificator
 
 def run():
 	try:
-		teste.main(username.get(), password.get(), excelFile, certificate)
+		
+		certificator.main(username.get(), password.get(), excelFile, certificate, messageValue.get(), messageText.get("1.0","end-1c"), subjectValue.get(), subjectText.get("1.0","end-1c"))
 		certificateEntry.delete(0,tk.END)
 		excelEntry.delete(0,tk.END)
 		usernameEntry.delete(0,tk.END)
@@ -20,7 +21,9 @@ def run():
 		nw.geometry("100x50")
 		message = tk.Label(nw, text="It's done").pack()
 		button = tk.Button(nw, text='OK', command=nw.destroy).pack()
+
 		nw.mainloop()
+
 	except:
 		nw = tk.Tk()
 		nw.title('ERROR')
@@ -53,7 +56,10 @@ def certificateFile():
 	certificateEntry.insert(0, certificate)
 
 def moreOptions():
+	global messageText
 	global messageValue
+	global subjectText
+	global subjectValue
 
 	optionsScreen = tk.Tk()
 	optionsScreen.geometry("500x500")
@@ -141,3 +147,4 @@ button2.pack(pady=5)
 runButton.pack(pady=10, padx=5, fill=tk.X, side=tk.LEFT)
 optionsButton.pack(pady=10, fill=tk.X, side=tk.RIGHT)
 window.mainloop()
+
